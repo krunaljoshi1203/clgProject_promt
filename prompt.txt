@@ -1,0 +1,13 @@
+i want to make web for farmars to check which crops thay can grow in particular area in the world ,
+
+i want to implement Ai and other features like medicines of their particular crops and watering time and all cares of their crop
+
+i also want to add map for their loaction selection 
+
+web side should look profetional and give all information 
+
+it has login page and history for users , also have Ai feactures and most usefull for users and give all info for farming like tools to use , watering , advice to protect their crops , cemicals they need to use and should not to use all thing 
+
+my web should give advice like chatgpt but it should free of api , ai api and all
+
+use reactjs + node.js + mongoDB
