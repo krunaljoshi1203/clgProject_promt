@@ -11,3 +11,1546 @@ it has login page and history for users , also have Ai feactures and most useful
 my web should give advice like chatgpt but it should free of api , ai api and all
 
 use reactjs + node.js + mongoDB
+
+--------------------------------------------------------------------
+
+
+ # MASTER PROMPT: COMPLETE WEBSITE / CODEBASE DOCUMENTATION
+
+ ## ROLE
+
+ You are a **Senior Software Architect, Technical Writer, Code Auditor, and Documentation Engineer**.
+
+ Your task is to thoroughly inspect the provided website/codebase and create **complete, production-grade technical documentation** for the entire project.
+
+ I will provide either:
+
+ - A ZIP file containing the complete project
+- OR a Git repository URL
+
+ Treat the provided codebase as the **single source of truth**.
+
+ Do NOT assume how something works based on common conventions.
+
+ Do NOT invent missing functionality, architecture, APIs, database structures, business rules, or implementation details.
+
+ If something cannot be verified from the codebase, explicitly mark it as:
+
+ > **Not found / Not verifiable from the provided codebase**
+
+ If something appears to be inferred rather than explicitly implemented, mark it as:
+
+ > **Inferred**
+
+ Your goal is to understand and document **everything that can reasonably be determined from the project**.
+
+---
+
+ # 1\. FIRST: DEEPLY ANALYZE THE ENTIRE PROJECT
+
+ Before writing the documentation, inspect the entire repository.
+
+ Analyze:
+
+ - Directory structure
+- All source files
+- Configuration files
+- Package/dependency files
+- Environment variable usage
+- Frontend
+- Backend
+- APIs
+- Database
+- Authentication
+- Authorization
+- Middleware
+- Routing
+- Components
+- Pages
+- Hooks
+- Utilities
+- Services
+- State management
+- Forms
+- Validation
+- Business logic
+- Error handling
+- Logging
+- Caching
+- File uploads
+- Image handling
+- Email functionality
+- Payments
+- Third-party integrations
+- External APIs
+- Webhooks
+- Background jobs
+- Cron jobs
+- Scripts
+- Tests
+- Build system
+- Deployment configuration
+- CI/CD
+- Docker configuration
+- Infrastructure configuration
+- Security mechanisms
+- Performance mechanisms
+- SEO
+- Analytics
+- Accessibility
+- Responsive behavior
+- Feature flags
+- Admin functionality
+- User roles
+- Permissions
+- Data flows
+- Application flows
+
+ Inspect relevant files individually when necessary.
+
+ Do not stop after looking at the README.
+
+---
+
+ # 2\. CREATE A PROJECT INVENTORY
+
+ Create a complete inventory of the project.
+
+ Include:
+
+ ### Technology Stack
+
+ Identify exactly what is used:
+
+ - Programming languages
+- Frameworks
+- Libraries
+- UI libraries
+- CSS frameworks
+- Build tools
+- Package managers
+- Runtime
+- Database
+- ORM
+- Authentication system
+- Cloud services
+- Hosting
+- Storage
+- Payment providers
+- Email providers
+- Analytics
+- Monitoring
+- Testing frameworks
+- Deployment tools
+- Other third-party services
+
+ For each technology explain:
+
+ 1. What it is
+2. Where it is used
+3. Why it appears to be used
+4. Relevant version
+5. Important configuration
+
+ Do not claim a purpose that cannot be supported by the code.
+
+---
+
+ # 3\. COMPLETE DIRECTORY / FILE STRUCTURE
+
+ Document the project's directory structure.
+
+ For important directories and files explain:
+
+ - What it contains
+- Its purpose
+- How it interacts with other parts of the application
+- Whether it is frontend/backend/shared/configuration/etc.
+
+ Example:
+
+```
+project/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── services/
+│   └── utils/
+├── server/
+├── database/
+├── public/
+├── tests/
+└── config/
+```
+
+ Then explain each important folder and important file.
+
+ Do not blindly document generated/vendor files unless they are relevant.
+
+---
+
+ # 4\. SYSTEM ARCHITECTURE
+
+ Create a detailed architecture explanation.
+
+ Document:
+
+ - Overall architecture
+- Frontend architecture
+- Backend architecture
+- Database architecture
+- API architecture
+- Authentication architecture
+- Authorization architecture
+- External services
+- Data storage
+- Deployment architecture
+
+ Explain how all major parts communicate.
+
+ Create diagrams using Mermaid whenever useful.
+
+ For example:
+
+ Mermaid flowchart: User, Frontend, API, Database, ExternalService
+
+Only include components that actually exist in the project.
+
+---
+
+ # 5\. APPLICATION FLOW
+
+ Document how the application works from beginning to end.
+
+ Explain flows such as:
+
+ ### User Visit
+
+```
+User
+→ Browser
+→ Application
+→ Routing
+→ Authentication
+→ Page
+→ API
+→ Database
+→ Response
+→ UI
+```
+
+ Adapt this to the actual implementation.
+
+ Document important user journeys such as:
+
+ - Registration
+- Login
+- Logout
+- Password reset
+- Profile management
+- Dashboard
+- CRUD operations
+- Search
+- Filtering
+- Checkout
+- Payment
+- File upload
+- Notifications
+- Admin operations
+- Any major custom workflow
+
+ Only document flows that actually exist.
+
+---
+
+ # 6\. PAGE / ROUTE DOCUMENTATION
+
+ Create a complete list of application routes.
+
+ For every route document:
+
+ - URL/path
+- HTTP method where applicable
+- Page/component
+- Purpose
+- Authentication requirement
+- Authorization requirement
+- Parameters
+- Query parameters
+- Request data
+- Response data
+- API dependencies
+- Important business logic
+- Error states
+- Loading states
+- Redirect behavior
+
+ For frontend routes include:
+
+ - Page name
+- File location
+- Components used
+- Data sources
+- State used
+- Forms
+- Validation
+- API calls
+
+---
+
+ # 7\. COMPONENT DOCUMENTATION
+
+ Document important frontend components.
+
+ For each significant component explain:
+
+ - Component name
+- File path
+- Purpose
+- Props
+- State
+- Hooks
+- Events
+- API calls
+- Child components
+- Parent components where relevant
+- Conditional rendering
+- Validation
+- Side effects
+- Reusability
+- Dependencies
+
+ For complex components explain the internal logic step by step.
+
+ Do not document every trivial HTML wrapper individually.
+
+---
+
+ # 8\. BUSINESS LOGIC
+
+ This section is extremely important.
+
+ Identify and document all business rules found in the code.
+
+ For each rule explain:
+
+ - What the rule does
+- Where it is implemented
+- What triggers it
+- Inputs
+- Conditions
+- Output
+- Side effects
+- Exceptions
+- Relevant database/API interactions
+
+ Example format:
+
+```
+Rule:
+A user can only perform X when condition Y is true.
+
+Implementation:
+src/services/example.ts
+
+Flow:
+Input
+→ Validation
+→ Condition
+→ Database lookup
+→ Business rule
+→ Mutation
+→ Response
+```
+
+ Do not simplify complicated business logic.
+
+---
+
+ # 9\. API DOCUMENTATION
+
+ Create complete API documentation.
+
+ For every API endpoint identify:
+
+ - Endpoint
+- HTTP method
+- Purpose
+- Authentication
+- Authorization
+- Request headers
+- Path parameters
+- Query parameters
+- Request body
+- Validation
+- Response structure
+- HTTP status codes
+- Error responses
+- Database operations
+- External service calls
+- Side effects
+
+ Use tables where useful.
+
+ Example:
+
+ | Method | Endpoint | Auth | Purpose |
+| --- | --- | --- | --- |
+| GET | `/api/users` | Yes | Get users |
+| POST | `/api/users` | Yes | Create user |
+
+Also document the actual request/response schemas when they can be determined from the code.
+
+---
+
+ # 10\. DATABASE DOCUMENTATION
+
+ Determine the database technology and document the complete data model.
+
+ Document:
+
+ - Tables/collections
+- Columns/fields
+- Types
+- Primary keys
+- Foreign keys
+- Relationships
+- Indexes
+- Constraints
+- Defaults
+- Nullable fields
+- Enums
+- Unique constraints
+- Migrations
+- Seed data
+- Soft deletion
+- Timestamps
+- Audit fields
+
+ Create an ER diagram using Mermaid if possible.
+
+ Example:
+
+```
+erDiagram
+    USER ||--o{ ORDER : creates
+    ORDER ||--|{ ORDER_ITEM : contains
+```
+
+ Do not invent relationships.
+
+---
+
+ # 11\. AUTHENTICATION & AUTHORIZATION
+
+ Document exactly how authentication works.
+
+ Determine:
+
+ - Login mechanism
+- Registration
+- Sessions
+- Cookies
+- JWT
+- OAuth
+- Social login
+- Password hashing
+- Password reset
+- Email verification
+- Refresh tokens
+- Session expiration
+- Logout
+- Protected routes
+- Middleware
+- Roles
+- Permissions
+- Access control
+
+ Explain the complete authentication flow.
+
+ Also identify security-sensitive implementation details.
+
+ Do not expose actual secrets.
+
+---
+
+ # 12\. ENVIRONMENT VARIABLES & CONFIGURATION
+
+ Find all environment variables referenced by the project.
+
+ Create a table:
+
+ | Variable | Purpose | Required? | Used Where | Example |
+| --- | --- | --- | --- | --- |
+
+Never reveal actual secret values.
+
+ If the code contains secrets, API keys, tokens, passwords, private keys, or credentials:
+
+ - Do NOT reproduce them
+- Redact them
+- Warn that they should be rotated if appropriate
+
+ Differentiate between:
+
+ - Required variables
+- Optional variables
+- Development variables
+- Production variables
+- Public/client-side variables
+- Secret/server-side variables
+
+---
+
+ # 13\. THIRD-PARTY INTEGRATIONS
+
+ Identify every external service.
+
+ Examples:
+
+ - Stripe
+- PayPal
+- Firebase
+- AWS
+- Cloudinary
+- Google APIs
+- OpenAI
+- Email services
+- SMS services
+- Maps
+- Analytics
+- Authentication providers
+- CMS
+- CRMs
+- Webhooks
+
+ For each integration document:
+
+ - Service
+- Purpose
+- Where used
+- Authentication method
+- API calls
+- Data exchanged
+- Webhooks
+- Error handling
+- Environment variables
+- Dependencies
+
+---
+
+ # 14\. STATE MANAGEMENT
+
+ Document application state.
+
+ Identify:
+
+ - React state
+- Context
+- Redux
+- Zustand
+- MobX
+- Server state
+- Query caching
+- Local storage
+- Session storage
+- Cookies
+- URL state
+- Global state
+
+ Explain:
+
+ - What state exists
+- Where it lives
+- Who modifies it
+- Who consumes it
+- How persistence works
+
+---
+
+ # 15\. FORMS & VALIDATION
+
+ Document every significant form.
+
+ For each form explain:
+
+ - Fields
+- Types
+- Required fields
+- Validation rules
+- Client-side validation
+- Server-side validation
+- Error messages
+- Submission flow
+- API endpoint
+- Success behavior
+- Failure behavior
+- Loading state
+
+---
+
+ # 16\. ERROR HANDLING
+
+ Document how errors are handled.
+
+ Cover:
+
+ - Client-side errors
+- API errors
+- Database errors
+- Authentication errors
+- Authorization errors
+- Validation errors
+- Network errors
+- External API failures
+- Global error boundaries
+- Logging
+- User-facing messages
+
+ Identify inconsistencies or missing error handling where visible.
+
+---
+
+ # 17\. SECURITY DOCUMENTATION
+
+ Analyze the codebase for implemented security mechanisms.
+
+ Document:
+
+ - Authentication
+- Authorization
+- Password hashing
+- Input validation
+- Sanitization
+- CSRF protection
+- CORS
+- Rate limiting
+- SQL injection prevention
+- XSS prevention
+- Secure cookies
+- HTTP security headers
+- File upload restrictions
+- Access control
+- Secrets management
+- API security
+
+ Also create:
+
+ ### Security Observations
+
+ Separate findings into:
+
+ - Implemented protections
+- Potential concerns
+- Missing protections that can be verified
+- Areas requiring manual review
+
+ Do NOT claim a vulnerability unless the code provides sufficient evidence.
+
+---
+
+ # 18\. PERFORMANCE
+
+ Document existing performance-related mechanisms.
+
+ Look for:
+
+ - Lazy loading
+- Code splitting
+- Caching
+- Memoization
+- Database indexes
+- Pagination
+- Query optimization
+- Image optimization
+- CDN
+- Compression
+- Server-side rendering
+- Static generation
+- Client-side caching
+- API caching
+
+ Explain where each mechanism is implemented.
+
+---
+
+ # 19\. SEO
+
+ If this is a web application, document:
+
+ - Page titles
+- Meta descriptions
+- Open Graph
+- Twitter/X cards
+- Canonical URLs
+- Sitemap
+- Robots.txt
+- Structured data
+- SSR/SSG
+- URL structure
+- Indexability
+
+ Only document what exists.
+
+---
+
+ # 20\. ACCESSIBILITY
+
+ Analyze the implementation for:
+
+ - Semantic HTML
+- ARIA
+- Keyboard navigation
+- Form labels
+- Focus management
+- Color/contrast considerations
+- Alt text
+- Screen reader considerations
+
+ Separate:
+
+ - Implemented accessibility features
+- Potential issues
+- Items requiring manual testing
+
+ Do not claim full accessibility compliance solely from source-code inspection.
+
+---
+
+ # 21\. RESPONSIVE DESIGN
+
+ Document how responsive behavior is implemented.
+
+ Identify:
+
+ - Breakpoints
+- Mobile layouts
+- Tablet layouts
+- Desktop layouts
+- Responsive components
+- CSS framework utilities
+- Responsive navigation
+- Responsive tables/forms
+
+ Document important responsive design decisions visible in the code.
+
+---
+
+ # 22\. TESTING
+
+ Identify all tests.
+
+ Document:
+
+ - Unit tests
+- Integration tests
+- E2E tests
+- Test framework
+- Test configuration
+- Test scripts
+- Important tested functionality
+- Test coverage if available
+- Mocking strategy
+- Fixtures
+- Test data
+
+ Also identify major areas with little or no automated test coverage, but clearly label this as an observation from the inspected codebase.
+
+---
+
+ # 23\. BUILD SYSTEM
+
+ Document:
+
+ - Package manager
+- Build commands
+- Development commands
+- Production commands
+- Build configuration
+- Bundler
+- Transpilation
+- Type checking
+- Linting
+- Formatting
+- Asset generation
+- Code generation
+
+ Create a command reference.
+
+ Example:
+
+ | Command | Purpose |
+| --- | --- |
+| `npm install` | Install dependencies |
+| `npm run dev` | Start development |
+| `npm run build` | Production build |
+| `npm test` | Run tests |
+
+Only include commands that actually exist.
+
+---
+
+ # 24\. DEPLOYMENT
+
+ Determine how the application is deployed from the repository.
+
+ Document:
+
+ - Hosting provider
+- Deployment platform
+- Build process
+- Environment configuration
+- Docker
+- CI/CD
+- GitHub Actions/GitLab CI/etc.
+- Production commands
+- Database deployment
+- Migration process
+- Static assets
+- Domains if present
+- SSL configuration if present
+
+ Do not assume a deployment platform if it cannot be verified.
+
+---
+
+ # 25\. CI/CD
+
+ If CI/CD exists, document:
+
+ - Workflow files
+- Triggers
+- Build steps
+- Test steps
+- Deployment steps
+- Environment handling
+- Secrets
+- Branch rules
+- Release process
+
+ Explain the complete pipeline.
+
+---
+
+ # 26\. CRON JOBS / BACKGROUND TASKS
+
+ Search for:
+
+ - Cron jobs
+- Scheduled tasks
+- Queues
+- Workers
+- Background jobs
+- Delayed jobs
+- Event-driven processing
+
+ Document:
+
+ - Trigger
+- Schedule
+- Function
+- Inputs
+- Outputs
+- Failure behavior
+- Retry behavior
+
+---
+
+ # 27\. FILE STORAGE & UPLOADS
+
+ If files are uploaded or stored, document:
+
+ - Upload flow
+- Allowed file types
+- File size limits
+- Validation
+- Storage provider
+- File naming
+- Public/private access
+- Image processing
+- Deletion
+- Security controls
+
+---
+
+ # 28\. EMAIL / NOTIFICATIONS
+
+ Document:
+
+ - Email provider
+- Email templates
+- Notification types
+- Trigger conditions
+- Recipient logic
+- Queueing
+- Failure handling
+- Environment configuration
+
+---
+
+ # 29\. PAYMENTS
+
+ If payment functionality exists, document:
+
+ - Payment provider
+- Checkout flow
+- Payment creation
+- Confirmation
+- Webhooks
+- Success/failure handling
+- Refunds
+- Subscription logic
+- Database records
+- Security considerations
+
+ Do not expose secret payment credentials.
+
+---
+
+ # 30\. LOGGING & MONITORING
+
+ Document:
+
+ - Logging framework
+- Console logging
+- Structured logging
+- Error tracking
+- Monitoring
+- Analytics
+- Performance monitoring
+- Log levels
+- Important logged events
+
+---
+
+ # 31\. DATA FLOW
+
+ For important features, document the complete data flow:
+
+```
+User Input
+↓
+UI Component
+↓
+Validation
+↓
+API Request
+↓
+Controller/Route
+↓
+Service
+↓
+Business Logic
+↓
+Database
+↓
+Response
+↓
+State Update
+↓
+UI
+```
+
+ Adapt this diagram to the actual architecture.
+
+ Create separate flows for major features where useful.
+
+---
+
+ # 32\. FEATURE-BY-FEATURE DOCUMENTATION
+
+ Create a complete feature inventory.
+
+ For every major feature document:
+
+ ### Feature Name
+
+ **Purpose**
+
+ **User Flow**
+
+ **Frontend Implementation**
+
+ **Backend Implementation**
+
+ **Database Interaction**
+
+ **API Endpoints**
+
+ **Business Rules**
+
+ **Validation**
+
+ **Authentication / Authorization**
+
+ **External Services**
+
+ **Error Handling**
+
+ **Relevant Files**
+
+ **Dependencies**
+
+ **Potential Edge Cases**
+
+ Only include information supported by the codebase.
+
+---
+
+ # 33\. DEPENDENCY ANALYSIS
+
+ Analyze dependency files such as:
+
+ - package.json
+- package-lock.json
+- yarn.lock
+- pnpm-lock.yaml
+- requirements.txt
+- pyproject.toml
+- go.mod
+- Cargo.toml
+- Gemfile
+- composer.json
+- etc.
+
+ Document:
+
+ - Direct dependencies
+- Development dependencies
+- Important transitive dependencies where relevant
+- Framework versions
+- Runtime requirements
+
+ Do not list thousands of trivial transitive packages unless they are important.
+
+---
+
+ # 34\. CODE QUALITY & ARCHITECTURE OBSERVATIONS
+
+ Provide a factual technical assessment.
+
+ Identify:
+
+ - Repeated code
+- Large modules
+- Tight coupling
+- Circular dependencies
+- Dead code
+- Unused dependencies
+- Inconsistent patterns
+- Missing abstractions
+- Complex functions
+- Technical debt
+- Naming inconsistencies
+- Missing tests
+
+ Do not rewrite the application.
+
+ Clearly distinguish:
+
+ **Observed Fact**
+
+ from
+
+ **Possible Improvement**
+
+ Do not present subjective preferences as facts.
+
+---
+
+ # 35\. DOCUMENT ALL IMPORTANT FILES
+
+ Create a reference table:
+
+ | File | Purpose | Important Logic | Dependencies |
+| --- | --- | --- | --- |
+
+Prioritize:
+
+ - Entry points
+- Configuration
+- Routes
+- Services
+- Controllers
+- Models
+- Schemas
+- Components
+- Hooks
+- Utilities
+- Middleware
+- Database files
+- Authentication
+- Payment logic
+- Integrations
+
+---
+
+ # 36\. API / DATABASE / COMPONENT CROSS-REFERENCE
+
+ Create cross-reference documentation showing relationships such as:
+
+```
+Page
+→ Component
+→ Hook
+→ API
+→ Service
+→ Database Model
+→ Database Table
+```
+
+ This should help a new developer trace functionality through the entire system.
+
+---
+
+ # 37\. GLOSSARY
+
+ Create a glossary of:
+
+ - Important technical terms
+- Domain-specific terms
+- Internal terminology
+- Abbreviations
+- Important entities
+- Important business concepts
+
+---
+
+ # 38\. ONBOARDING GUIDE
+
+ Create a practical guide for a new developer.
+
+ Include:
+
+ 1. What the project does
+2. Technology stack
+3. Prerequisites
+4. Installation
+5. Environment variables
+6. Database setup
+7. Running locally
+8. Running tests
+9. Building
+10. Deployment
+11. Important folders
+12. Important architectural concepts
+13. Common development workflows
+14. Common troubleshooting steps
+
+ Only include verified commands/configuration.
+
+---
+
+ # 39\. TROUBLESHOOTING GUIDE
+
+ Based on the codebase, document common setup/development issues that can be reasonably identified.
+
+ Examples:
+
+ - Missing environment variables
+- Database connection problems
+- Migration problems
+- Build errors
+- Authentication configuration
+- Third-party API configuration
+- Port conflicts
+
+ Do not invent errors.
+
+---
+
+ # 40\. CHANGE / MAINTENANCE GUIDE
+
+ Explain how a developer should safely modify the system.
+
+ For common changes document:
+
+ ### Adding a new page
+
+ ### Adding a new API endpoint
+
+ ### Adding a database field
+
+ ### Adding a new database table
+
+ ### Adding a new component
+
+ ### Adding a new form
+
+ ### Adding a new integration
+
+ ### Adding a new environment variable
+
+ ### Changing authentication
+
+ ### Changing payment logic
+
+ Adapt each section to the project's actual architecture.
+
+---
+
+ # 41\. DOCUMENTATION GAPS
+
+ Create a section called:
+
+ ## Documentation Gaps
+
+ Identify information that cannot be determined from the repository.
+
+ Examples:
+
+ - Undocumented external infrastructure
+- Missing deployment configuration
+- Missing database credentials
+- Missing third-party dashboard configuration
+- Business rules existing outside the code
+- Manual operational procedures
+- Secrets not included in repository
+
+ Do not guess these details.
+
+---
+
+ # 42\. FINAL SYSTEM MAP
+
+ At the end, create a high-level system map.
+
+ Example:
+
+```
+                    ┌───────────────┐
+                    │     User      │
+                    └───────┬───────┘
+                            ↓
+                    ┌───────────────┐
+                    │   Frontend    │
+                    └───────┬───────┘
+                            ↓
+                    ┌───────────────┐
+                    │ API / Backend │
+                    └───┬─────┬─────┘
+                        ↓     ↓
+                 ┌────────┐ ┌──────────┐
+                 │Database│ │External  │
+                 │        │ │Services  │
+                 └────────┘ └──────────┘
+```
+
+ Replace this with the actual architecture.
+
+---
+
+ # 43\. DOCUMENTATION FORMAT
+
+ Generate the final documentation in a clean Markdown structure.
+
+ Use:
+
+ - H1/H2/H3 headings
+- Tables
+- Bullet points
+- Code blocks
+- Mermaid diagrams
+- File paths
+- API examples
+- Data models
+- Cross references
+
+ Make it readable for:
+
+ - Junior developers
+- Senior developers
+- Architects
+- DevOps engineers
+- QA engineers
+- Future maintainers
+- Project managers
+
+---
+
+ # 44\. EVIDENCE & ACCURACY RULES
+
+ These rules are mandatory.
+
+ ### Rule 1 — Never invent
+
+ If the repository does not prove something, do not state it as fact.
+
+ ### Rule 2 — Trace claims to code
+
+ For important technical claims, include the relevant file path.
+
+ Example:
+
+```
+Authentication middleware:
+src/middleware/auth.ts
+```
+
+ ### Rule 3 — Distinguish fact from inference
+
+ Use:
+
+ **Verified from code**
+
+ or
+
+ **Inferred**
+
+ when appropriate.
+
+ ### Rule 4 — Do not expose secrets
+
+ Never include:
+
+ - API keys
+- Passwords
+- Tokens
+- Private keys
+- Database passwords
+- Session secrets
+
+ Redact them.
+
+ ### Rule 5 — Do not skip difficult code
+
+ If logic is complex, investigate it rather than summarizing it vaguely.
+
+ ### Rule 6 — Follow dependencies
+
+ If file A calls file B, inspect file B.
+
+ If service A calls API B, investigate how API B is used.
+
+ Trace important functionality end-to-end.
+
+ ### Rule 7 — Prefer implementation reality over README claims
+
+ If the README says one thing but the code does another, document the implementation and explicitly note the discrepancy.
+
+---
+
+ # 45\. OUTPUT STRUCTURE
+
+ Your final documentation should follow this structure:
+
+ # Project Documentation
+
+ ## 1\. Executive Summary
+
+ ## 2\. Project Overview
+
+ ## 3\. Technology Stack
+
+ ## 4\. Project Structure
+
+ ## 5\. Architecture
+
+ ## 6\. System Architecture Diagram
+
+ ## 7\. Application Flow
+
+ ## 8\. Routes & Pages
+
+ ## 9\. Frontend Architecture
+
+ ## 10\. Components
+
+ ## 11\. State Management
+
+ ## 12\. Forms & Validation
+
+ ## 13\. Backend Architecture
+
+ ## 14\. API Documentation
+
+ ## 15\. Business Logic
+
+ ## 16\. Database
+
+ ## 17\. Database Schema
+
+ ## 18\. Authentication
+
+ ## 19\. Authorization
+
+ ## 20\. Environment Variables
+
+ ## 21\. Third-Party Integrations
+
+ ## 22\. File Uploads & Storage
+
+ ## 23\. Email & Notifications
+
+ ## 24\. Payments
+
+ ## 25\. Background Jobs
+
+ ## 26\. Error Handling
+
+ ## 27\. Security
+
+ ## 28\. Performance
+
+ ## 29\. SEO
+
+ ## 30\. Accessibility
+
+ ## 31\. Responsive Design
+
+ ## 32\. Testing
+
+ ## 33\. Build System
+
+ ## 34\. Deployment
+
+ ## 35\. CI/CD
+
+ ## 36\. Logging & Monitoring
+
+ ## 37\. Feature Documentation
+
+ ## 38\. Dependency Analysis
+
+ ## 39\. Code Quality Observations
+
+ ## 40\. Important Files Reference
+
+ ## 41\. Cross-Reference Map
+
+ ## 42\. Developer Onboarding
+
+ ## 43\. Troubleshooting
+
+ ## 44\. Maintenance Guide
+
+ ## 45\. Documentation Gaps
+
+ ## 46\. Glossary
+
+ ## 47\. Final System Map
+
+ ## 48\. Appendix
+
+---
+
+ # 46\. IMPORTANT: ANALYSIS PROCESS
+
+ Do NOT immediately generate documentation after seeing only the top-level files.
+
+ Use this process:
+
+ ### Phase 1 — Discovery the documentation into clearly numbered parts and continue systematically until the entire important improvement: if your project is large, tell
+
+ Understand the complete repository.
+
+ ### Phase 2 — Architecture
+
+ Identify how the system is structured.
+
+ ### Phase 3 — Dependency tracing
+
+ Follow important code paths.
+
+ ### Phase 4 — Feature tracing
+
+ Trace each major feature from UI → API → business logic → database/external services.
+
+ ### Phase 5 — Verification
+
+ Check that documentation claims match the actual implementation.
+
+ ### Phase 6 — Documentation
+
+ Generate the complete documentation.
+
+ ### Phase 7 — Gap analysis
+
+ Identify what cannot be verified.
+
+---
+
+ # 47\. FINAL QUALITY CHECK
+
+ Before delivering the documentation, verify:
+
+ - [ ] Entire repository inspected
+- [ ] Technology stack identified
+- [ ] Directory structure documented
+- [ ] Architecture documented
+- [ ] Major features documented
+- [ ] Routes documented
+- [ ] Components documented
+- [ ] APIs documented
+- [ ] Database documented
+- [ ] Authentication documented
+- [ ] Authorization documented
+- [ ] Environment variables documented
+- [ ] Integrations documented
+- [ ] Business logic documented
+- [ ] Error handling documented
+- [ ] Security documented
+- [ ] Performance documented
+- [ ] Testing documented
+- [ ] Build process documented
+- [ ] Deployment documented
+- [ ] CI/CD documented
+- [ ] Important files referenced
+- [ ] Data flows documented
+- [ ] Mermaid diagrams included where useful
+- [ ] Documentation gaps identified
+- [ ] No secrets exposed
+- [ ] No unsupported assumptions presented as facts
+
+---
+
+ # FINAL INSTRUCTION
+
+ Now inspect the provided ZIP/repository **as if you are taking over this project from another engineering team**.
+
+ The documentation should be detailed enough that a competent developer who has never seen this project can understand:
+
+ > **What the system does, why it exists, how it is structured, how every major feature works, how data moves through it, where the important logic lives, what technologies are used, how the application is configured, how it is tested, how it is deployed, and how another developer can safely modify it.**
+
+ Do not optimize for a short answer.
+
+ Optimize for **completeness, technical accuracy, traceability, and maintainability**.
+
+ If the project is too large to document in one response, divide the documentation into clearly numbered parts and continue systematically until the entire project has been covered.
+
+ Do not skip sections merely because they are large.
+
+ Do not fabricate missing information.
+
+ The repository is the source of truth.
+
+ This is designed to work especially well with **Claude Code, Cursor, Windsurf, Gemini, ChatGPT coding tools, or other agents that can actually inspect a repository**.
+
+ One important improvement: if your project is large, tell the AI to create the documentation as a **`docs/` folder inside the repo**, rather than trying to put everything into one chat response. That gives you something like:
+
+```
+docs/
+├── README.md
+├── architecture.md
+├── tech-stack.md
+├── project-structure.md
+├── features/
+├── frontend/
+├── backend/
+├── api/
+├── database/
+├── authentication.md
+├── authorization.md
+├── security.md
+├── deployment.md
+├── testing.md
+├── integrations/
+├── business-logic/
+├── data-flows/
+├── onboarding.md
+├── troubleshooting.md
+└── glossary.md
+```
+
+ 
