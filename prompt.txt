@@ -1,6 +1,706 @@
+# UNIVERSAL PROJECT REPORT GENERATION PROMPT
+
+## ROLE
+
+Act as a professional software project documentation expert, software engineer, system analyst, and academic report writer.
+
+Your task is to analyze the complete source code of the project provided in the uploaded ZIP file and create a detailed, professional academic project report in PDF and DOCX formats.
+
+I will provide:
+
+1. **Project ZIP file:** Contains the complete source code and related project files.
+2. **Reference PDF:** An academic project report whose structure, formatting, chapter order, and presentation style must be followed.
+
+The report must be based on the actual project in the ZIP file. Do not assume that every project uses the same programming language, database, framework, architecture, or technologies.
+
+---
+
+# 1. MAIN OBJECTIVE
+
+Create a complete academic software project report that closely follows the uploaded reference PDF.
+
+The generated report must:
+
+* Follow the reference PDF's chapter order, headings, subheadings, and overall structure.
+* Use the actual information discovered in the uploaded project's source code.
+* Automatically identify the project's programming languages, frameworks, libraries, databases, tools, and technologies.
+* Include detailed explanations of the project's modules and functionality.
+* Include suitable diagrams, tables, and technical documentation.
+* Use placeholders for all personal and institutional information.
+* Leave clearly marked, blank spaces for screenshots.
+* Include additional chapters or topics if they are relevant to the project.
+* Contain **at least 40 pages**, preferably 40–50 pages or more when justified by the project.
+* Be written in formal, clear, grammatically correct academic English.
+
+Do not simply create a generic report. Every technical section must be customized to the uploaded project.
+
+---
+
+# 2. ANALYZE THE PROJECT ZIP FILE FIRST
+
+Before writing the report, thoroughly inspect the uploaded ZIP file.
+
+Extract and analyze:
+
+* Source code files
+* Folder and file structure
+* Configuration files
+* Database files and SQL scripts
+* API routes and endpoints
+* Frontend components and pages
+* Backend controllers and services
+* Models and database schemas
+* Authentication and authorization mechanisms
+* External libraries and dependencies
+* Environment configuration examples
+* Admin and user modules
+* Project documentation, if available
+
+Identify the following information wherever possible:
+
+1. Project title
+2. Project purpose
+3. Problem statement
+4. Project objectives
+5. Existing system
+6. Proposed system
+7. Scope of the project
+8. Main users and their roles
+9. Functional requirements
+10. Non-functional requirements
+11. Programming languages
+12. Frontend technologies
+13. Backend technologies
+14. Database technology
+15. Development tools
+16. Frameworks and libraries
+17. System architecture
+18. Database tables and relationships
+19. Main application modules
+20. Input and output processes
+21. Authentication and authorization
+22. Important business logic
+23. Security features
+24. Testing possibilities
+25. Current limitations
+26. Possible future enhancements
+
+If a particular feature is not present in the source code, do not claim that it exists.
+
+If some information cannot be verified, clearly label it as "Not specified", "Not found in source code", or "To be verified", as appropriate.
+
+Never invent project functionality, database tables, test results, screenshots, or implementation details.
+
+---
+
+# 3. REFERENCE PDF STRUCTURE
+
+Use the following chapters as the primary structure of the report. Preserve the order and adapt the content to the uploaded project.
+
+## Preliminary Pages
+
+1. Cover Page
+2. Acknowledgement
+3. Index / Table of Contents
+
+Use the reference PDF as a guide for the cover page and preliminary page design.
+
+### Personal Information Placeholders
+
+Use placeholders instead of inventing personal information.
+
+Examples:
+
+* [STUDENT NAME]
+* [ENROLLMENT NUMBER]
+* [COURSE / DEGREE]
+* [SEMESTER]
+* [PROJECT GUIDE NAME]
+* [COLLEGE / UNIVERSITY NAME]
+* [DEPARTMENT NAME]
+* [ACADEMIC YEAR]
+* [SUBMISSION DATE]
+
+Make the placeholders easy to find and replace.
+
+Do not use real names, college names, or other personal details unless I explicitly provide them.
+
+---
+
+# 4. REQUIRED CHAPTERS AND HEADINGS
+
+Include the following chapters, adapting the subheadings as needed for the project.
+
+## Chapter 1: Project Profile
+
+Include:
+
+* Project Title
+* Project Description
+* Development Software
+* Front End
+* Backend
+* Database
+* Programming Language
+* Frameworks and Libraries
+* Operating System
+* Documentation Tool
+* Academic Year
+* Developed By
+* Submitted To
+
+Use a clear table or the same style as the reference PDF.
+
+For technologies, mention only those actually used in the project.
+
+## Chapter 2: Software Development Life Cycle
+
+Explain the software development process in the context of the uploaded project.
+
+Include:
+
+### 2.1 Requirement Gathering
+
+* Introduction
+* Project requirements
+* User-side features
+* Admin-side features, if applicable
+* Other user roles, if applicable
+* Functional requirements
+* Non-functional requirements
+
+### 2.2 Project Planning
+
+* Project planning overview
+* Module identification
+* Technology selection
+* Development environment
+* Project implementation plan
+
+### 2.3 Design
+
+* Preliminary Design
+* Final Design
+* User Interface Design
+* Database Design
+* System Architecture Design
+
+### 2.4 Coding and Implementation
+
+* Coding standards
+* Project structure
+* Database creation
+* Frontend development
+* Backend development
+* API development, if applicable
+* Application implementation
+* Integration of modules
+
+### 2.5 Testing
+
+* Testing overview
+* Testing methods
+* Module testing
+* Integration testing
+* System testing
+* User acceptance testing, if applicable
+
+Use the SDLC methodology only if it is documented or can reasonably be described as the methodology used. Otherwise, explain the development stages without falsely claiming a specific methodology.
+
+## Chapter 3: System Requirement Specifications
+
+Include:
+
+### 3.1 Minimum Hardware Requirements
+
+* Operating System
+* CPU / Processor
+* RAM
+* Storage
+* Other necessary hardware
+
+### 3.2 Software Requirements
+
+* Operating System
+* Development IDE
+* Programming Languages
+* Database Software
+* Frameworks
+* Web Server
+* Browser
+* Required Services
+* Runtime Environment
+* Other dependencies
+
+### 3.3 System Configuration
+
+* Development environment
+* Server requirements
+* Client requirements
+* Network requirements
+
+Distinguish between verified requirements and suggested minimum requirements. Do not invent exact hardware requirements if they are not documented.
+
+## Chapter 4: About the Tools and Technologies
+
+Create separate subsections for the actual tools and technologies used in the uploaded project.
+
+For each technology, explain:
+
+* Introduction
+* Main features
+* Purpose in the project
+* How it is used in the project
+* Advantages relevant to the project
+
+Possible technologies include, but are not limited to:
+
+* HTML
+* CSS
+* JavaScript
+* PHP
+* Python
+* Java
+* C#
+* React
+* Angular
+* Vue.js
+* Node.js
+* Express.js
+* Laravel
+* Django
+* Flask
+* MySQL
+* PostgreSQL
+* MongoDB
+* Firebase
+* SQLite
+* Android Studio
+* Visual Studio Code
+* XAMPP
+* Git
+* Other tools found in the project
+
+Only include technologies actually used or clearly required by the project. Do not include unrelated technologies merely to increase the page count.
+
+## Chapter 5: Data Flow Diagram (DFD)
+
+Create DFDs appropriate to the project's actual functionality.
+
+Include:
+
+* Context-Level DFD (Level 0)
+* Level 1 DFD
+* User-side DFD
+* Admin-side DFD, if applicable
+* Other role-specific DFDs, if applicable
+
+For each diagram:
+
+* Use meaningful process names.
+* Show external entities.
+* Show data stores.
+* Show data flows.
+* Ensure the diagram reflects the actual application.
+* Add a brief explanation below the diagram.
+
+Generate clear, readable diagrams. Do not insert fake or irrelevant processes.
+
+## Chapter 6: Entity Relationship Diagram (ERD)
+
+Create an ER diagram based on the actual database schema.
+
+Include:
+
+* Entities
+* Attributes
+* Primary keys
+* Foreign keys
+* Relationships
+* Cardinality
+
+If the project uses a relational database, accurately represent its tables and relationships.
+
+If the project uses a NoSQL database or does not have a traditional relational schema, provide an appropriate data model instead and explain the difference.
+
+Include a brief explanation of the diagram.
+
+## Chapter 7: Data Dictionary
+
+Document the database structure in detail.
+
+For each actual database table or collection, include:
+
+* Table / Collection Name
+* Field Name
+* Data Type
+* Size, if applicable
+* Primary Key
+* Foreign Key
+* Constraints
+* Description
+
+Create a separate table for each database table or collection.
+
+If the project uses a relational database, document the actual schema.
+
+If it uses a NoSQL database, describe the document or collection structure.
+
+Do not invent fields or relationships.
+
+## Chapter 8: Screen Shots
+
+This chapter is mandatory, but **do not insert fake screenshots or generate screenshots that pretend to be real application screens**.
+
+Analyze the project's frontend and identify all important screens.
+
+Organize screenshots into suitable categories, such as:
+
+### User Side Screens
+
+* Login Screen
+* Registration Screen
+* Home Screen
+* Dashboard
+* Main Feature Screens
+* Details Screens
+* Profile Screen
+* Other relevant screens
+
+### Admin Side Screens
+
+* Admin Login Screen
+* Admin Dashboard
+* User Management
+* Data Management
+* Add / Edit / Delete Screens
+* Reports
+* Other relevant screens
+
+Adapt these headings to the actual project.
+
+### Screenshot Placeholder Requirements
+
+For every identified screen:
+
+1. Add a heading containing the screen name.
+2. Add a short explanation of the screen and its functionality.
+3. Insert a large, clearly visible, blank rectangular area for the screenshot.
+4. Add a caption such as "Figure 8.1: Home Screen".
+5. Make the blank area large enough for a screenshot to be inserted later.
+6. Keep the screenshot area empty, with no fake UI or generated images.
+7. Use consistent dimensions and formatting throughout the chapter.
+
+If the project has many screens, include all important ones. Do not create unnecessary screenshot sections simply to increase the page count.
+
+If a screen cannot be verified from the source code, mark it as a suggested screenshot or "To be verified".
+
+## Chapter 9: Test Cases
+
+Create test cases based on the actual project features.
+
+Divide them into suitable sections, such as:
+
+### 9.1 Test Cases (User Side)
+
+For each relevant user feature, include:
+
+* Test Case ID
+* Test Case Name
+* Test Description
+* Test Steps
+* Expected Output
+* Actual Output
+* Test Result
+
+### 9.2 Test Cases (Admin Side)
+
+Include tests for actual administrative functionality, if present.
+
+### 9.3 Additional Test Cases
+
+Include API, database, authentication, or other tests if they are relevant.
+
+Use clear tables with consistent formatting.
+
+**Important:** Do not claim that tests passed unless they were actually executed and verified. If the project cannot be run or the tests have not been executed, use:
+
+* Actual Output: Not Executed
+* Test Result: Not Verified
+
+Clearly distinguish proposed test cases from completed tests.
+
+## Chapter 10: Limitations
+
+Describe the actual limitations identified in the source code or project configuration.
+
+Potential topics:
+
+* Missing functionality
+* Incomplete modules
+* Performance considerations
+* Security limitations
+* Scalability considerations
+* User interface limitations
+* Dependency on external services
+* Deployment limitations
+
+Do not claim that a limitation exists without evidence. Where appropriate, identify potential limitations as areas for further evaluation.
+
+## Chapter 11: Future Enhancement
+
+Suggest realistic improvements that are relevant to the project.
+
+Possible topics:
+
+* Additional features
+* Improved user experience
+* Performance optimization
+* Security improvements
+* Mobile responsiveness
+* Better reporting
+* Improved database design
+* API integration
+* Deployment improvements
+* Scalability
+
+Clearly distinguish proposed enhancements from features already implemented.
+
+## Chapter 12: Webliography / References
+
+Include:
+
+* Official technology documentation
+* Framework documentation
+* Database documentation
+* Relevant libraries
+* Other resources actually used or consulted
+
+Use reliable sources, preferably official documentation.
+
+Do not invent URLs or claim that a source was consulted if it was not.
+
+---
+
+# 5. ADDITIONAL CHAPTERS WHEN NECESSARY
+
+You may add relevant chapters or subsections if they improve the report and are supported by the project.
+
+Possible additions include:
+
+* Abstract
+* Introduction
+* Problem Statement
+* Objectives
+* Scope of the Project
+* Existing System
+* Proposed System
+* Feasibility Study
+* System Architecture
+* Module Description
+* Use Case Diagram
+* Activity Diagram
+* Sequence Diagram
+* Class Diagram
+* Database Design
+* Implementation Details
+* Security Analysis
+* Deployment Guide
+* Conclusion
+
+Use these additions only when they are useful and appropriate.
+
+Keep the main chapter structure of the reference PDF wherever possible. Additional chapters should complement, not replace, the required chapters.
+
+---
+
+# 6. PAGE COUNT AND CONTENT DEPTH
+
+The final report must contain **at least 40 pages**.
+
+Aim for approximately 40–50 pages or more, depending on the project's complexity.
+
+Do not achieve the page count by:
+
+* Repeating the same paragraphs
+* Adding irrelevant information
+* Using excessively large fonts
+* Adding unnecessary blank pages
+* Duplicating diagrams
+* Padding the report with meaningless content
+
+Instead, reach the required length through:
+
+* Detailed explanations of actual project modules
+* Thorough SDLC documentation
+* Technology descriptions
+* System architecture
+* DFDs and ERDs
+* Detailed data dictionary tables
+* Individual screen descriptions and screenshot placeholders
+* Comprehensive test cases
+* Relevant additional technical chapters
+
+Each chapter should contain enough meaningful information to make the report complete and academically useful.
+
+If the project is too small to support 40 pages of meaningful content, expand the explanations of its real design, implementation, and testing without inventing features.
+
+---
+
+# 7. FORMATTING AND DESIGN
+
+Use the reference PDF as the primary design guide.
+
+The report should have a clean, professional academic appearance.
+
+### Page Layout
+
+* A4 paper size
+* Portrait orientation, unless a diagram requires landscape orientation
+* Consistent margins
+* Page numbers
+* Consistent header and footer
+* Proper paragraph alignment
+* Consistent spacing
+
+### Typography
+
+* Use a readable academic font, such as Times New Roman.
+* Body text: approximately 12 pt.
+* Chapter headings: approximately 16–18 pt.
+* Subheadings: approximately 13–14 pt.
+* Use consistent heading styles.
+
+### Tables
+
+* Use properly formatted tables.
+* Prevent text from overflowing page boundaries.
+* Repeat table headers when tables span multiple pages.
+* Use consistent borders and alignment.
+
+### Diagrams
+
+* Use clear labels.
+* Ensure diagrams are readable when printed.
+* Keep diagrams aligned and properly sized.
+* Include figure numbers and captions.
+
+### Screenshot Areas
+
+* Use large blank rectangular placeholders.
+* Include a short instruction such as "[INSERT SCREENSHOT HERE]".
+* Keep screenshot placeholders consistent.
+* Do not use fake application screenshots.
+
+### Index
+
+* Create a proper table of contents.
+* Include chapter and subsection titles.
+* Ensure page numbers match the final document.
+
+### Overall Appearance
+
+The final report should resemble the uploaded reference PDF in structure and academic presentation, while improving readability, consistency, and formatting where necessary.
+
+---
+
+# 8. PERSONAL INFORMATION AND PLACEHOLDERS
+
+Use placeholders for all personal and institutional information.
+
+Examples:
+
+[STUDENT NAME]
+
+[ENROLLMENT NUMBER]
+
+[COURSE NAME]
+
+[SEMESTER]
+
+[PROJECT GUIDE NAME]
+
+[COLLEGE NAME]
+
+[UNIVERSITY NAME]
+
+[DEPARTMENT NAME]
+
+[ACADEMIC YEAR]
+
+[SUBMISSION DATE]
+
+Use these placeholders wherever relevant, including the cover page and acknowledgement.
+
+Do not ask me to provide this information before generating the report. Complete the report with placeholders.
+
+---
+
+# 9. ACCURACY AND QUALITY CONTROL
+
+Before finalizing the report, verify that:
+
+1. The project title matches the uploaded project.
+2. The technologies match the actual source code.
+3. The database documentation matches the actual schema.
+4. The DFD and ERD reflect the actual application.
+5. The described modules exist in the project.
+6. The screenshot placeholders correspond to relevant screens.
+7. The test cases relate to actual functionality.
+8. Unexecuted tests are not marked as passed.
+9. Personal information is represented by placeholders.
+10. The required chapters are included.
+11. The report contains at least 40 pages.
+12. The table of contents and page numbers are correct.
+13. No important section is accidentally omitted.
+14. The document has no broken tables, overlapping text, or cut-off diagrams.
+15. The report is written in formal academic English.
+
+If information is missing, use a clear placeholder or note rather than making up facts.
+
+---
+
+# 10. FINAL OUTPUT FILES
+
+Generate the following files:
+
+1. **Project_Report.docx** — Editable Microsoft Word document.
+2. **Project_Report.pdf** — Final PDF version.
+
+Both files must contain the same report content and follow the same chapter structure.
+
+Make sure the DOCX is properly formatted and editable.
+
+Export the PDF from the completed report and verify its page count and layout.
+
+Do not provide only an outline, summary, or sample chapter. Generate the complete report.
+
+---
+
+# 11. FINAL INSTRUCTIONS
+
+Start by extracting and analyzing the uploaded ZIP file.
+
+Then inspect the reference PDF and use it as the model for the report's structure and presentation.
+
+Prepare the report using the actual project details, with personal-information placeholders and blank screenshot areas.
+
+Include the required chapters and any additional relevant topics.
+
+Ensure the final report contains at least 40 pages without unnecessary repetition or fabricated information.
+
+Finally, provide download links for both the DOCX and PDF files.
+
+If a feature, technology, diagram, or detail cannot be verified, clearly state that instead of inventing it.
+
+**Begin analyzing the uploaded files and generate the complete project report now.**
+
+
+--------------------------------------------------------------------------------------
+
 now give a promt to make project report like given pdf for any porject which i upload in zip file , it should cover those headings and use place holder for personal information , also blank the space for screen shots and also add some topics if need and report should have 40 or above pages.
 
-
+-------------------------------------------------------------------------
 
 i want to make web for farmars to check which crops thay can grow in particular area in the world ,
 
