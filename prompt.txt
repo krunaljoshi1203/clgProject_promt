@@ -1,3 +1,7 @@
+now give a promt to make project report like given pdf for any porject which i upload in zip file , it should cover those headings and use place holder for personal information , also blank the space for screen shots and also add some topics if need and report should have 40 or above pages.
+
+
+
 i want to make web for farmars to check which crops thay can grow in particular area in the world ,
 
 i want to implement Ai and other features like medicines of their particular crops and watering time and all cares of their crop
